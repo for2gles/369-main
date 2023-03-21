@@ -1,0 +1,86 @@
+/* 모바일 반응형 및 무지개 배경 */
+body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4, #f6d365, #f8cbad, #a1c4fd, #c2e9fb, #84fab0);
+    background-size: 300% 300%;
+    animation: Gradient 15s ease infinite;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 30px;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 카드 스타일 */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    min-height: 25vh;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-text {
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+
+.card-body .a {
+    align-self: flex-end;
+}
+
+
+.blurred {
+    user-select: none;
+    filter: blur(5px);
+}
+
+.blurred * {
+    pointer-events: none;
+}
+
+/* 모바일 반응형 그리드 */
+@media (max-width: 576px) {
+    .col-sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* 데스크탑 그리드 */
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 30px;
+}
